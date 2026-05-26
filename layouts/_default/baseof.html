@@ -15,6 +15,7 @@
     </nav>
   </header>
   <main>
+    {{ if .IsHome }}<h1 class="sr-only">{{ .Site.Title }}</h1>{{ end }}
     {{ block "main" . }}{{ end }}
   </main>
   <footer>
