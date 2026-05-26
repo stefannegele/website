@@ -65,8 +65,9 @@ nav {
 }
 
 .site-title {
-  font-weight: 400;
-  font-size: 3rem;
+  font-weight: 500;
+  font-size: 1.2rem;
+  font-stretch: 200%;
   color: var(--color-text);
   text-decoration: none;
   flex: 1;
