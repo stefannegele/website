@@ -20,10 +20,5 @@ post:
 external:
 	hugo new content external/$(shell echo "$(TITLE)" | tr '[:upper:]' '[:lower:]' | sed 's/ /-/g').md
 
-# Run in Docker dev container
-docker-dev:
-	docker build -f Dockerfile.dev -t website-dev .
-	docker run --rm -it -v $(PWD):/site -p 1313:1313 website-dev make dev
-
 clean:
 	rm -rf public/ resources/ .hugo_build.lock
