@@ -1,3 +1,11 @@
+@font-face {
+  font-family: "Linea";
+  src: url("/fonts/Linea-subset.woff2") format("woff2");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 :root {
   --color-bg: #fefcff;
   --color-text: #1a1a1a;
@@ -65,11 +73,13 @@ nav {
 }
 
 .site-title {
-  font-weight: 600;
-  font-size: 1.1rem;
+  font-family: "Linea", var(--font-sans);
+  font-weight: normal;
+  font-size: 1.2rem;
   color: var(--color-text);
   text-decoration: none;
   flex: 1;
+  letter-spacing: 0.02em;
 }
 
 .sr-only {
