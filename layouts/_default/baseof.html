@@ -11,8 +11,8 @@
 <body>
   <header>
     <nav>
-      <a href="{{ "/" | relURL }}" class="site-title">{{ .Site.Title }}</a>
-      <a href="{{ "/impressum" | relURL }}">Impressum</a>
+      <a href="{{ "" | absURL }}" class="site-title">{{ .Site.Title }}</a>
+      <a href="{{ "impressum/" | absURL }}">Impressum</a>
     </nav>
   </header>
   <main>
