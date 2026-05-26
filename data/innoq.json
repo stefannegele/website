@@ -10,5 +10,17 @@
     "url": "https://www.innoq.com/en/articles/2026/03/autonomous-data-product-size-heuristics/",
     "date": "2026-03-13",
     "summary": "Setting the boundaries of data products incorrectly can lead to integration issues, unclear ownership and duplicated logic. This guide offers practical heuristics for creating data products of the right size."
+  },
+  {
+    "title": "Data Inventories and the EU Data Act",
+    "url": "https://www.innoq.com/en/articles/2025/09/dateninventare-eu-data-act/",
+    "date": "2025-09-02",
+    "summary": "This article explains the role of data inventories in the context of the EU Data Act and explores how organizations can implement them effectively."
+  },
+  {
+    "title": "Architecture Study: Technologies for Service Integration",
+    "url": "https://www.innoq.com/en/articles/2024/04/architekturstudie-technologien-zur-integration-von-services/",
+    "date": "2024-04-16",
+    "summary": "This article presents an architecture study on technologies for integrating services, examining various approaches and their trade-offs to support informed technology decisions."
   }
 ]
