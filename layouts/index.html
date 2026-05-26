@@ -1,9 +1,4 @@
 {{ define "main" }}
-<section class="intro">
-  <h1>{{ .Site.Title }}</h1>
-  <p>{{ .Site.Params.description }}</p>
-</section>
-
 {{ $innoq := site.Data.innoq | default slice }}
 {{ $allPosts := slice }}
 
