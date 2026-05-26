@@ -27,7 +27,7 @@
     <span class="post-date">{{ dateFormat "02.01.2006" .Date }}</span>
     {{ if eq .Params.source "external" }}
     <a href="{{ .Params.external_url }}" target="_blank" rel="noopener">{{ .Title }}</a>
-    <span class="post-source">extern</span>
+    <span class="post-source">external</span>
     {{ else }}
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     {{ end }}
