@@ -134,12 +134,21 @@ nav a:hover { color: var(--color-accent); }
 
 .post-source {
   font-size: 0.75rem;
-  color: var(--color-muted);
-  background: var(--color-border);
   padding: 0.1em 0.5em;
   border-radius: 3px;
   margin-left: 0.5rem;
   vertical-align: middle;
+  font-weight: 500;
+}
+
+.post-source--article {
+  background: #feced6;
+  color: #c4003e;
+}
+
+.post-source--podcast {
+  background: #bfcfd4;
+  color: #004153;
 }
 
 .post-summary {

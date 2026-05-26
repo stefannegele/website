@@ -16,18 +16,21 @@
 {{ range $sorted }}
   {{ $isMap := eq (printf "%T" .) "map[string]interface {}" }}
   {{ if $isMap }}
-  <li class="post-item post-external">
+  <li class="post-item">
     <span class="post-date">{{ dateFormat "02.01.2006" .date }}</span>
     <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
-    <span class="post-source">INNOQ</span>
+    {{ if eq .type "podcast" }}
+    <span class="post-source post-source--podcast">podcast</span>
+    {{ else }}
+    <span class="post-source post-source--article">INNOQ</span>
+    {{ end }}
     {{ with .summary }}<p class="post-summary">{{ . }}</p>{{ end }}
   </li>
   {{ else }}
-  <li class="post-item {{ if eq .Params.source "external" }}post-external{{ end }}">
+  <li class="post-item">
     <span class="post-date">{{ dateFormat "02.01.2006" .Date }}</span>
     {{ if eq .Params.source "external" }}
     <a href="{{ .Params.external_url }}" target="_blank" rel="noopener">{{ .Title }}</a>
-    <span class="post-source">external</span>
     {{ else }}
     <a href="{{ .RelPermalink }}">{{ .Title }}</a>
     {{ end }}
