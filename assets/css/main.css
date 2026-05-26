@@ -75,12 +75,14 @@ nav {
 .site-title {
   font-family: "Linea", var(--font-sans);
   font-weight: normal;
-  font-size: 1.2rem;
+  font-size: 1.6rem;
   color: var(--color-text);
   text-decoration: none;
   flex: 1;
   letter-spacing: 0.02em;
 }
+
+.site-title:hover { color: #407048; }
 
 .sr-only {
   position: absolute;
