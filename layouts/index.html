@@ -1,0 +1,44 @@
+{{ define "main" }}
+<section class="intro">
+  <h1>{{ .Site.Title }}</h1>
+  <p>{{ .Site.Params.description }}</p>
+</section>
+
+{{ $innoq := site.Data.innoq | default slice }}
+{{ $allPosts := slice }}
+
+{{ range where .Site.RegularPages "Type" "ne" "page" }}
+  {{ $allPosts = $allPosts | append . }}
+{{ end }}
+
+{{ range $innoq }}
+  {{ $allPosts = $allPosts | append . }}
+{{ end }}
+
+{{ $sorted := sort $allPosts "Date" "desc" }}
+
+<ul class="post-list">
+{{ range $sorted }}
+  {{ $isMap := eq (printf "%T" .) "map[string]interface {}" }}
+  {{ if $isMap }}
+  <li class="post-item post-external">
+    <span class="post-date">{{ dateFormat "02.01.2006" .date }}</span>
+    <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
+    <span class="post-source">INNOQ</span>
+    {{ with .summary }}<p class="post-summary">{{ . }}</p>{{ end }}
+  </li>
+  {{ else }}
+  <li class="post-item {{ if eq .Params.source "external" }}post-external{{ end }}">
+    <span class="post-date">{{ dateFormat "02.01.2006" .Date }}</span>
+    {{ if eq .Params.source "external" }}
+    <a href="{{ .Params.external_url }}" target="_blank" rel="noopener">{{ .Title }}</a>
+    <span class="post-source">extern</span>
+    {{ else }}
+    <a href="{{ .RelPermalink }}">{{ .Title }}</a>
+    {{ end }}
+    {{ with .Params.summary }}<p class="post-summary">{{ . }}</p>{{ end }}
+  </li>
+  {{ end }}
+{{ end }}
+</ul>
+{{ end }}

@@ -1,0 +1,15 @@
+baseURL = "https://stefannegele.github.io/website/"
+languageCode = "de"
+title = "Stefan Negele"
+
+[params]
+  author = "Stefan Negele"
+  description = "Artikel über Data Architecture, verteilte Systeme und Software Engineering."
+
+[markup.goldmark.renderer]
+  unsafe = true
+
+[markup.highlight]
+  style = "dracula"
+
+disableKinds = ["taxonomy", "term"]

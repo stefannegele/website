@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="{{ .Site.LanguageCode }}">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ .Title }} – {{ .Site.Title }}{{ end }}</title>
+  <meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Summary }}{{ end }}">
+  {{ $css := resources.Get "css/main.css" | minify }}
+  <style>{{ $css.Content | safeCSS }}</style>
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="{{ "/" | relURL }}" class="site-title">{{ .Site.Title }}</a>
+      <a href="{{ "/impressum" | relURL }}">Impressum</a>
+    </nav>
+  </header>
+  <main>
+    {{ block "main" . }}{{ end }}
+  </main>
+  <footer>
+    <p>{{ .Site.Params.author }}</p>
+  </footer>
+</body>
+</html>
