@@ -19,11 +19,6 @@
   <li class="post-item">
     <span class="post-date">{{ dateFormat "02.01.2006" .date }}</span>
     <a href="{{ .url }}" target="_blank" rel="noopener">{{ .title }}</a>
-    {{ if eq .type "podcast" }}
-    <span class="post-source post-source--podcast">podcast</span>
-    {{ else }}
-    <span class="post-source post-source--article">INNOQ</span>
-    {{ end }}
     {{ with .summary }}<p class="post-summary">{{ . }}</p>{{ end }}
   </li>
   {{ else }}

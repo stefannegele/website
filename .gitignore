@@ -1,6 +1,5 @@
 public/
 resources/
 .hugo_build.lock
-data/innoq.json
 __pycache__/
 *.pyc

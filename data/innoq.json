@@ -1,0 +1,14 @@
+[
+  {
+    "title": "The Missing Half of Your Data Strategy",
+    "url": "https://www.innoq.com/en/articles/2026/05/the-missing-half-of-your-data-strategy/",
+    "date": "2026-05-04",
+    "summary": "In order to stay competitive, a modern data architecture is essential. It enables sound decisions and data-driven development at all levels, from strategic choices to feature prioritisation and buy-or-build decisions. The ability to collect, understand and act on data is no longer optional. Many organisations recognise this and are investing in data mesh initiatives and similar approaches. Through modern infrastructure and self-service platforms, they aim to democratise access to corporate data. However, these platforms often fail to fulfil their potential because people still do not know how to work with data or what value they can derive from it. For a successful data strategy, this has to change. Let’s talk about data literacy."
+  },
+  {
+    "title": "The right size of a Data Product",
+    "url": "https://www.innoq.com/en/articles/2026/03/autonomous-data-product-size-heuristics/",
+    "date": "2026-03-13",
+    "summary": "Setting the boundaries of data products incorrectly can lead to integration issues, unclear ownership and duplicated logic. This guide offers practical heuristics for creating data products of the right size."
+  }
+]
