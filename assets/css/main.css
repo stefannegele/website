@@ -76,13 +76,11 @@ nav {
   font-family: "Linea", var(--font-sans);
   font-weight: normal;
   font-size: 3rem;
-  color: #407048;
+  color: var(--color-text);
   text-decoration: none;
   flex: 1;
   letter-spacing: 0.02em;
 }
-
-.site-title:hover { color: var(--color-accent); }
 
 .sr-only {
   position: absolute;
