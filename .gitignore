@@ -1,0 +1,4 @@
+blog.db
+blog-server
+*.db
+*.log

@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Artikel bearbeiten – Stefan Negele</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/static/css/style.css">
+</head>
+<body>
+  <div class="admin-bar">
+    <span>⚙️ Admin</span>
+    <a href="/admin">← Zurück zur Übersicht</a>
+  </div>
+  <header>
+    <div class="header-inner">
+      <a href="/" class="site-title">Stefan Negele</a>
+    </div>
+  </header>
+  <main>
+    <div class="container" style="max-width:660px;">
+      <h1 class="page-heading" style="margin: 1.5rem 0 1.5rem;">
+        {{if .IsNew}}Neuer Artikel{{else}}Artikel bearbeiten{{end}}
+      </h1>
+
+      {{if .Error}}<div class="alert-error">{{.Error}}</div>{{end}}
+
+      <form method="POST">
+        <div class="form-group">
+          <label>Titel</label>
+          <input type="text" name="title" class="form-control" value="{{.Post.Title}}" required>
+        </div>
+
+        {{if .IsNew}}
+        <div class="form-group">
+          <label>Quelle</label>
+          <select name="source" class="form-control">
+            <option value="internal">Intern (eigener Artikel)</option>
+            <option value="external">Extern (Link zu fremdem Artikel)</option>
+          </select>
+        </div>
+        {{else}}
+        <div class="form-group">
+          <label>Quelle</label>
+          <input type="text" class="form-control" value="{{.Post.Source}}" disabled>
+        </div>
+        {{end}}
+
+        <div class="form-group">
+          <label>Datum</label>
+          <input type="date" name="published_at" class="form-control" value="{{.Post.PublishedAt.Format "2006-01-02"}}">
+        </div>
+
+        <div class="form-group">
+          <label>URL (für externe Artikel)</label>
+          <input type="url" name="url" class="form-control" value="{{.Post.URL}}" placeholder="https://...">
+        </div>
+
+        <div class="form-group">
+          <label>Kurzbeschreibung</label>
+          <textarea name="summary" class="form-control" rows="3" style="min-height:80px;">{{.Post.Summary}}</textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Inhalt (HTML)</label>
+          <textarea name="content" class="form-control">{{.Post.Content}}</textarea>
+        </div>
+
+        <div style="display:flex; gap:0.75rem;">
+          <button type="submit" class="btn btn-primary">Speichern</button>
+          <a href="/admin" class="btn" style="background:var(--color-border); color:var(--color-text);">Abbrechen</a>
+        </div>
+      </form>
+    </div>
+  </main>
+</body>
+</html>
