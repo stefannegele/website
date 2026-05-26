@@ -51,6 +51,12 @@ footer a {
 
 footer a:hover { color: var(--color-accent); }
 
+footer a + a::before {
+  content: "·";
+  margin: 0 0.5rem;
+  color: var(--color-muted);
+}
+
 /* Nav */
 nav {
   display: flex;
