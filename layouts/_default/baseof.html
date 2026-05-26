@@ -11,7 +11,7 @@
 <body>
   <header>
     <nav>
-      <a href="{{ "" | absURL }}" class="site-title">{{ .Site.Title }}</a>
+      {{ if .IsHome }}<h1 class="site-title"><a href="{{ "" | absURL }}">{{ .Site.Title }}</a></h1>{{ else }}<a href="{{ "" | absURL }}" class="site-title">{{ .Site.Title }}</a>{{ end }}
     </nav>
   </header>
   <main>

@@ -64,6 +64,13 @@ nav {
   color: var(--color-text);
   text-decoration: none;
   flex: 1;
+  margin: 0;
+  line-height: inherit;
+}
+
+.site-title a {
+  color: var(--color-text);
+  text-decoration: none;
 }
 
 nav a {
