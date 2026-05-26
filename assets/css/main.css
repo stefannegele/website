@@ -49,7 +49,7 @@ footer a {
   text-decoration: none;
 }
 
-footer a:hover { color: #9b4dca; }
+footer a:hover { color: #407048; }
 
 footer a + a::before {
   content: "·";
@@ -90,7 +90,7 @@ nav a {
   font-size: 0.9rem;
 }
 
-nav a:hover { color: #9b4dca; }
+nav a:hover { color: #407048; }
 
 /* Intro */
 .intro {
@@ -136,7 +136,7 @@ nav a:hover { color: #9b4dca; }
   font-weight: 500;
 }
 
-.post-item a:hover { color: #9b4dca; }
+.post-item a:hover { color: #407048; }
 
 
 
@@ -171,7 +171,7 @@ nav a:hover { color: #9b4dca; }
 .article-body h2 { font-size: 1.3rem; margin-top: 2rem; }
 .article-body h3 { font-size: 1.1rem; margin-top: 1.5rem; }
 .article-body a { color: var(--color-accent); }
-.article-body a:hover { color: #9b4dca; }
+.article-body a:hover { color: #407048; }
 .article-body code {
   font-family: var(--font-mono);
   font-size: 0.875em;
