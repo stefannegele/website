@@ -1,4 +1,6 @@
-blog.db
-blog-server
+public/
+resources/
+.hugo_build.lock
 *.db
 *.log
+blog-server
