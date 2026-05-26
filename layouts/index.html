@@ -1,4 +1,6 @@
 {{ define "main" }}
+<h1 class="sr-only">{{ .Site.Title }}</h1>
+
 {{ $innoq := site.Data.innoq | default slice }}
 {{ $allPosts := slice }}
 
