@@ -4,7 +4,7 @@ title = "Stefan Negele"
 
 [params]
   author = "Stefan Negele"
-  description = "Articles on data architecture, distributed systems, and software engineering."
+  description = "Software developer and architect since 2012. I help teams design data architectures, build data products, and navigate distributed systems."
 
 [markup.goldmark.renderer]
   unsafe = true

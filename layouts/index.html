@@ -12,6 +12,9 @@
 
 {{ $sorted := sort $allPosts "Date" "desc" }}
 
+<div class="intro">
+  <p class="intro-tagline">Senior Consultant · Data Architecture · Software Architecture</p>
+</div>
 <ul class="post-list">
 {{ range $sorted }}
   {{ $isMap := eq (printf "%T" .) "map[string]interface {}" }}
