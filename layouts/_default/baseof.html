@@ -12,14 +12,13 @@
   <header>
     <nav>
       <a href="{{ "" | absURL }}" class="site-title">{{ .Site.Title }}</a>
-      <a href="{{ "impressum/" | absURL }}">Impressum</a>
     </nav>
   </header>
   <main>
     {{ block "main" . }}{{ end }}
   </main>
   <footer>
-    <p>{{ .Site.Params.author }}</p>
+    <a href="{{ "impressum/" | absURL }}">Impressum</a>
   </footer>
 </body>
 </html>
